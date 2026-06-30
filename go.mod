@@ -14,9 +14,9 @@ require (
 	github.com/google/go-cmp v0.7.0
 	github.com/google/gopacket v1.1.19
 	github.com/kr/pretty v0.3.1
-	github.com/networkop/meshnet-cni v0.3.1-0.20230525201116-d7c306c635cf
+	github.com/networkop/meshnet-cni v0.4.0
 	github.com/open-traffic-generator/keng-operator v0.4.2
-	github.com/open-traffic-generator/snappi/gosnappi v1.57.1
+	github.com/open-traffic-generator/snappi/gosnappi v1.58.0
 	github.com/openconfig/gnmi v0.14.1
 	github.com/openconfig/lemming/operator v0.2.7
 	github.com/openconfig/ondatra v0.14.5
@@ -33,15 +33,15 @@ require (
 	go.universe.tf/metallb v0.16.1
 	golang.org/x/oauth2 v0.36.0
 	golang.org/x/sync v0.21.0
-	google.golang.org/api v0.286.0
-	google.golang.org/grpc v1.81.1
+	google.golang.org/api v0.287.0
+	google.golang.org/grpc v1.82.0
 	google.golang.org/protobuf v1.36.12-0.20260120151049-f2248ac996af
 	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/api v0.36.2
 	k8s.io/apimachinery v0.36.2
 	k8s.io/client-go v0.36.2
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/utils v0.0.0-20260617174310-a95e086a2553
+	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/controller-runtime v0.24.1
 	sigs.k8s.io/yaml v1.6.0
 )
