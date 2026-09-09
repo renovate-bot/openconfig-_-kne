@@ -99,8 +99,7 @@ build {
       "sudo apt-get update",
       // kube-proxy requires conntrack to route traffic, and kubeadm v1.31+ enforces it in preflight checks
       "sudo apt-get install conntrack -y",
-      // TODO: Remove pin when kubectl reports a version number other than `v0.0.0-master+$Format:%H$`.
-      "sudo apt-get install kubelet kubeadm kubectl=1:578.0.0-0 -y",
+      "sudo apt-get install kubelet kubeadm kubectl -y",
       "kubectl version --client",
       "echo 'source <(kubectl completion bash)' >> ~/.bashrc",
       "echo 'alias k=kubectl' >> ~/.bashrc",
@@ -124,6 +123,7 @@ build {
       "sudo modprobe br_netfilter",
       "echo \"1\" > sudo tee /proc/sys/net/bridge/bridge-nf-call-iptables",
       "echo \"1\" > sudo tee /proc/sys/net/ipv4/ip_forward",
+      "echo 'net.core.netdev_max_backlog = 10000\nnet.core.rmem_max = 16777216\nnet.core.wmem_max = 16777216\nnet.core.rmem_default = 16777216\nnet.core.wmem_default = 16777216' | sudo tee /etc/sysctl.d/99-kne.conf",
       "sudo sysctl --system",
       "sudo sysctl -p",
       "sudo mkdir -p /etc/containerd",
